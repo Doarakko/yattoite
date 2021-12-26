@@ -212,8 +212,7 @@ def is_working():
     )
     now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9)))
 
-    return now >= clock_in_at and now <= clock_out_at:
-
+    return now >= clock_in_at and now <= clock_out_at
 
 
 def get_date():
