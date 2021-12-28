@@ -1,0 +1,58 @@
+{
+    "name": "yattoite",
+    "description": "Slack bot that responds on my behalf on holidays using freee人事労務",
+    "repository": "https://github.com/Doarakko/yattoite",
+    "keywords": [
+        "bot",
+        "slack bot",
+        "markov chain",
+        "freee人事労務"
+    ],
+    "env": {
+        "APP_BASE": {
+            "description": "Do not change this value.",
+            "value": "app"
+        },
+        "SLACK_APP_TOKEN": {
+            "description": "Enter your slack app token.",
+            "value": "xapp-aaaa"
+        },
+        "SLACK_BOT_TOKEN": {
+            "description": "Enter your slack bot token.",
+            "value": "xapp-bbbb"
+        },
+        "SLACK_USER_ID": {
+            "description": "Enter your slack user id.",
+            "value": "ABCD01234"
+        },
+        "FREEE_CLIENT_ID": {
+            "description": "Enter your freee client id.",
+            "value": "cccc"
+        },
+        "FREEE_CLIENT_SECRET": {
+            "description": "Enter your freee client secret.",
+            "value": "dddd"
+        },
+        "FREEE_CODE": {
+            "description": "Enter your freee code.",
+            "value": "eeee"
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "https://github.com/lstoll/heroku-buildpack-monorepo"
+        },
+        {
+            "url": "https://github.com/heroku/heroku-buildpack-python"
+        }
+    ],
+    "addons": [
+        "heroku-postgresql"
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
