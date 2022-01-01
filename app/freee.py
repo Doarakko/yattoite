@@ -199,6 +199,8 @@ def is_working():
 
 def get_date():
     now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9)))
-    month = str(now.month).ljust(2 - len(str(now.month)), "0")
-    day = str(now.day).ljust(2 - len(str(now.day)), "0")
+
+    # 1 -> 01
+    month = str(now.month).rjust(2, "0")
+    day = str(now.day).rjust(2, "0")
     return "{}{}".format(month, day)
