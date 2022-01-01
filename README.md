@@ -153,9 +153,10 @@ def message(say):
 
     # camouflage to avoid being identified as a bot
     time.sleep(
-        random.choice(
-            [10, 20, 20, 30, 30, 30, 60, 60, 60, 180, 240, 300, 360, 420, 480, 540, 600]
-        )
+        random.choices(
+            [10, 20, 30, 60, 120, 180, 240, 300, 360, 420, 480, 540, 600],
+            [3, 3, 3, 5, 5, 5, 3, 3, 1, 1, 1, 1, 1],
+        )[0]
     )
 
     ...
