@@ -36,7 +36,6 @@ def message(say):
 
 if __name__ == "__main__":
     Database.initialise()
-    freee.initialise()
 
     handler = SocketModeHandler(app, os.environ["SLACK_APP_TOKEN"])
     handler.start()
