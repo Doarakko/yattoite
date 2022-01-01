@@ -50,18 +50,6 @@ class FreeeUser:
     def __init__(self, employee_id=None):
         self.employee_id = employee_id
 
-    def create_table(self):
-        with Cursor() as cur:
-            cur.execute(
-                "CREATE TABLE freee_users (\
-                        id SERIAL NOT NULL,\
-                        employee_id integer,\
-                        created_at TIMESTAMP DEFAULT NOW(),\
-                        updated_at TIMESTAMP DEFAULT NOW(),\
-                        PRIMARY KEY (id)\
-                    );"
-            )
-
     @classmethod
     def get_employee_id(cls):
         with Cursor() as cur:
@@ -86,20 +74,6 @@ class FreeeAccessToken:
     def __init__(self, token=None, refresh_token=None):
         self.token = token
         self.refresh_token = refresh_token
-
-    def create_table(self):
-        with Cursor() as cur:
-            cur.execute(
-                "CREATE TABLE freee_access_tokens (\
-                        id SERIAL NOT NULL,\
-                        token TEXT NOT NULL,\
-                        refresh_token TEXT NOT NULL,\
-                        expired_at TIMESTAMP NOT NULL,\
-                        created_at TIMESTAMP DEFAULT NOW(),\
-                        updated_at TIMESTAMP DEFAULT NOW(),\
-                        PRIMARY KEY (id)\
-                    );"
-            )
 
     @classmethod
     def get_token(cls):

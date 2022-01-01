@@ -117,7 +117,7 @@ Let's enjoy tuning!
 ### 7. Insert records
 
 ```sh
-docker exec -it app python scripts/7_insert.py
+docker exec -it app python scripts/6_insert.py
 ```
 
 ## Run on Heroku
