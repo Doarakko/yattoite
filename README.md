@@ -135,14 +135,14 @@ On local enter the `DATABASE_URL`, other data create and insert methods are the 
 ### Bot does not respond when you are working
 
 ```python
-def message(say):
+def message(message):
     ...
 
     if freee.is_working():
         return
 
     ...
-    say(row.body)
+    client.chat_postMessage(channel=message["channel"], text=row.body)
 ```
 
 ### Make a rug without getting an immediate response
