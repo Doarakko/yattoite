@@ -5,6 +5,7 @@ import time
 
 from slack_bolt import App
 from slack_bolt.adapter.socket_mode import SocketModeHandler
+from slack_sdk import WebClient
 
 from db import Database
 import freee
@@ -15,23 +16,25 @@ logging.basicConfig(level=logging.WARNING)
 
 
 app = App(token=os.environ["SLACK_BOT_TOKEN"])
+client = WebClient(token=os.environ["SLACK_BOT_TOKEN"])
 
 
 @app.message("^.*<@{}>.*$".format(os.environ["SLACK_USER_ID"]))
-def message(say):
-    message = Message()
-    row = message.get_by_random()
+def message(message):
+    m = Message()
+    row = m.get_by_random()
 
     if freee.is_working():
         return
 
     # camouflage to avoid being identified as a bot
     time.sleep(
-        random.choice(
-            [10, 20, 20, 30, 30, 30, 60, 60, 60, 180, 240, 300, 360, 420, 480, 540, 600]
-        )
+        random.choices(
+            [10, 20, 30, 60] + list(range(180, 601, 60)), [1, 2, 3, 3] + [1] * 8
+        )[0]
     )
-    say(row.body)
+
+    client.chat_postMessage(channel=message["channel"], text=row.body)
 
 
 if __name__ == "__main__":
