@@ -19,7 +19,7 @@
         },
         "SLACK_BOT_TOKEN": {
             "description": "Enter your slack bot token.",
-            "value": "xapp-bbbb"
+            "value": "xoxb-bbbb"
         },
         "SLACK_USER_ID": {
             "description": "Enter your slack user id.",
