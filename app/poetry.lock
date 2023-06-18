@@ -822,12 +822,12 @@ files = [
 
 [[package]]
 name = "markovify"
-version = "0.9.3"
+version = "0.9.4"
 description = "A simple, extensible Markov chain generator. Uses include generating random semi-plausible sentences based on an existing text."
 optional = false
-python-versions = "*"
+python-versions = ">=3.6"
 files = [
-    {file = "markovify-0.9.3.tar.gz", hash = "sha256:e31c6fcdf4ed12c8e00e39df735ffa0d5546f7515ff4c32e4e0ae23c41f9cba9"},
+    {file = "markovify-0.9.4.tar.gz", hash = "sha256:eac0a156ed54bb6bede32ef20131813fbec9db70b515ead57b4d8887a16dfe39"},
 ]
 
 [package.dependencies]
@@ -2447,4 +2447,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "e7ffbb4ae80151d763637023bdbf5d25af118a2d58e0f4862871e901ba07dc8b"
+content-hash = "2a321cfc73faaf9122501e28b8fd1247981ea8610925903538f66bf66850b332"
