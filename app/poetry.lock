@@ -1833,23 +1833,24 @@ files = [
 
 [[package]]
 name = "slack-bolt"
-version = "1.11.1"
+version = "1.11.6"
 description = "The Bolt Framework for Python"
 optional = false
 python-versions = ">=3.6"
 files = [
-    {file = "slack_bolt-1.11.1-py2.py3-none-any.whl", hash = "sha256:0b1d77f5f26fe4fc0318593e0faa9398766229123dab2cbe466e54abc368f1d1"},
-    {file = "slack_bolt-1.11.1.tar.gz", hash = "sha256:2399f65ae76af4864cd7b0248a61a622fdf8d199a21f5b14ab6ed5b53df27636"},
+    {file = "slack_bolt-1.11.6-py2.py3-none-any.whl", hash = "sha256:43aaadde470a8ed0d6737ed97b1f4f38a6ec53ab842eca076bad497cd8eb1d70"},
+    {file = "slack_bolt-1.11.6.tar.gz", hash = "sha256:7aad413b3d59884c74defe73f9d697ac13056c9cfcd2f5482c5eb8c9f9aa9322"},
 ]
 
 [package.dependencies]
 slack-sdk = ">=3.9.0,<4"
 
 [package.extras]
-adapter = ["CherryPy (>=18,<19)", "Django (>=3,<4)", "Flask (>=1,<2)", "Werkzeug (<2)", "boddle (>=0.2,<0.3)", "boto3 (<=2)", "bottle (>=0.12,<1)", "chalice (>=1.26.1,<2)", "click (>=7,<8)", "falcon (>=2,<3)", "fastapi (>=0.70.0,<1)", "gunicorn (>=20,<21)", "moto (<2)", "pyramid (>=1,<2)", "requests (>=2,<3)", "sanic (>=21,<22)", "sanic-testing (>=0.7)", "starlette (>=0.14,<1)", "tornado (>=6,<7)", "uvicorn (<1)", "websocket-client (>=1,<1.2.2)"]
+adapter = ["CherryPy (>=18,<19)", "Django (>=3,<5)", "Flask (>=1,<3)", "Werkzeug (>=2,<3)", "boto3 (<=2)", "bottle (>=0.12,<1)", "chalice (>=1.26.5,<2)", "click (>=7,<8)", "falcon (>=2,<4)", "fastapi (>=0.70.0,<1)", "gunicorn (>=20,<21)", "pyramid (>=1,<3)", "sanic (>=21,<22)", "starlette (>=0.14,<1)", "tornado (>=6,<7)", "uvicorn (<1)", "websocket-client (>=1.2.3,<2)"]
+adapter-testing = ["Flask (>=1,<2)", "Werkzeug (>=1,<2)", "boddle (>=0.2,<0.3)", "docker (>=5,<6)", "moto (>=3,<4)", "requests (>=2,<3)", "sanic-testing (>=0.7)"]
 async = ["aiohttp (>=3,<4)", "websockets (>=8,<10)"]
-testing = ["Flask-Sockets (>=0.2,<1)", "Werkzeug (<2)", "aiohttp (>=3,<4)", "black (==21.12b0)", "pytest (>=6.2.5,<7)", "pytest-asyncio (<1)", "pytest-cov (>=3,<4)"]
-testing-without-asyncio = ["Flask-Sockets (>=0.2,<1)", "Werkzeug (<2)", "black (==21.12b0)", "pytest (>=6.2.5,<7)", "pytest-cov (>=3,<4)"]
+testing = ["Flask-Sockets (>=0.2,<1)", "Werkzeug (>=1,<2)", "aiohttp (>=3,<4)", "black (==22.1.0)", "itsdangerous (==2.0.1)", "pytest (>=6.2.5,<7)", "pytest-asyncio (<1)", "pytest-cov (>=3,<4)"]
+testing-without-asyncio = ["Flask-Sockets (>=0.2,<1)", "Werkzeug (>=1,<2)", "black (==22.1.0)", "itsdangerous (==2.0.1)", "pytest (>=6.2.5,<7)", "pytest-cov (>=3,<4)"]
 
 [[package]]
 name = "slack-sdk"
@@ -2447,4 +2448,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "e7ffbb4ae80151d763637023bdbf5d25af118a2d58e0f4862871e901ba07dc8b"
+content-hash = "0cb6bdc72c5694950211e9f77bb6f0b9526b18111e32cb552a4a39a6e981e191"
